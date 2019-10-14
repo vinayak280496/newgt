@@ -1,0 +1,6 @@
+c:\users\ca172009\documents\visual studio 2010\Projects\pgm16\pgm16\bin\Debug\pgm16.exe
+c:\users\ca172009\documents\visual studio 2010\Projects\pgm16\pgm16\bin\Debug\pgm16.pdb
+c:\users\ca172009\documents\visual studio 2010\Projects\pgm16\pgm16\obj\x86\Debug\pgm16.exe
+c:\users\ca172009\documents\visual studio 2010\Projects\pgm16\pgm16\obj\x86\Debug\pgm16.pdb
+C:\Users\Ca172009\Documents\C# Lab\pgm16\pgm16\pgm16\obj\x86\Debug\pgm16.exe
+C:\Users\Ca172009\Documents\C# Lab\pgm16\pgm16\pgm16\obj\x86\Debug\pgm16.pdb

@@ -1,0 +1,6 @@
+c:\users\ca172009\documents\visual studio 2010\Projects\pgm3\pgm3\bin\Debug\pgm3.exe
+c:\users\ca172009\documents\visual studio 2010\Projects\pgm3\pgm3\bin\Debug\pgm3.pdb
+c:\users\ca172009\documents\visual studio 2010\Projects\pgm3\pgm3\obj\x86\Debug\pgm3.exe
+c:\users\ca172009\documents\visual studio 2010\Projects\pgm3\pgm3\obj\x86\Debug\pgm3.pdb
+C:\Users\Ca172009\Documents\C# Lab\pgm3\pgm3\pgm3\obj\x86\Debug\pgm3.exe
+C:\Users\Ca172009\Documents\C# Lab\pgm3\pgm3\pgm3\obj\x86\Debug\pgm3.pdb

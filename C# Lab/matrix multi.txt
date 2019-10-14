@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Matricies_Multiplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.Title = ("Matix Multiplication");
+            int[,] mat1 = new int[2, 2];
+            int[,] mat2 = new int[2, 2];
+            int[,] mat3 = new int[2, 2];
+
+            Console.WriteLine("Enter Element for 1st Array ");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    mat1[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("Matrix one element are stored.\n");
+            Console.WriteLine("Enter Element for 2nd Array.");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    mat2[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            int r1 = mat1.GetLength(0);
+            int c1 = mat1.GetLength(1);
+            int r2 = mat2.GetLength(0);
+            int c2 = mat1.GetLength(1);
+
+            //Console.WriteLine("\n\t\tRows \tColumn");
+            //Console.WriteLine("Matrix 1\t" + r1.ToString() + "\t" + c1.ToString());
+            //Console.WriteLine("Matrix 2\t" + r2.ToString() + "\t" + c2.ToString());
+            //Console.WriteLine("\n");
+
+            Console.WriteLine("Matrix two element are stored.");
+            Console.WriteLine("First Array");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Console.Write("\t" + mat1[i, j]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Second Array");
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Console.Write("\t" + mat2[i, j]);
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Multiplication of two matrix");
+
+            for (int i = 0; i < r1; i++)
+            {
+                for (int j = 0; j < c2; j++)
+                {
+                    for (int k = 0; k < c1; k++)
+                    {
+                        mat3[i, j] += mat1[i, k] * mat2[k, j];
+                    }
+                }
+            }
+
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Console.Write("\t" + mat3[i, j]);
+                }
+                Console.WriteLine();
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}
