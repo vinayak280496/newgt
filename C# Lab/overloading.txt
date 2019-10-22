@@ -1,28 +1,61 @@
 using System;
-public class Cal
-{
-    
-    public static int add(int a, int b)
-    {
-        return a + b;
-    }
-    public static float add(float a, float b)
-    {
-        return a + b;
-    }
-}
-public class TestMemberOverloading
-{
-    public static void Main()
-    {
-        Console.WriteLine("***********************");
-        Console.WriteLine("Program for OverLoding.");
-        Console.WriteLine("***********************");
-        
-        Console.WriteLine(Cal.add(12, 23));
-        Console.WriteLine(Cal.add(12.4f, 21.3f));
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-        Console.ReadLine();
+namespace operator_overriding
+{
+    class Rectangle
+    {
+        int width;
+        int height;
 
+        Rectangle(int width, int height)
+        {
+            this.width = width;
+            this.height = height;
+        }
+
+        public static Rectangle operator +(Rectangle a, Rectangle b)
+        {
+            int totalWidth = a.width + b.width;
+            int totalHeight = a.height + b.height;
+            return new Rectangle(totalWidth, totalHeight);
+
+        }
+
+        static void Main(string[] args)
+        {
+           
+            Rectangle r1 = new Rectangle(95, 54);
+            Rectangle r2 = new Rectangle(53, 90);
+            Console.WriteLine("-----------------");
+            Console.WriteLine("First Rectangle");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("");
+            Console.WriteLine("Rectangle Width: {0}", r1.width);
+            Console.WriteLine("Rectangle Height: {0}", r1.height);
+
+            Console.WriteLine();
+
+            Console.WriteLine("-----------------");
+            Console.WriteLine("Second Rectangle");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("");
+            Console.WriteLine("Rectangle Width: {0}", r2.width);
+            Console.WriteLine("Rectangle Height: {0}", r2.height);
+
+            Console.WriteLine();
+
+            Console.WriteLine("-----------------");
+            Console.WriteLine("Output");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("");
+
+            Rectangle r3 = r1 + r2;
+            Console.WriteLine("Total Width: {0}", r3.width);
+            Console.WriteLine("Total Height: {0}", r3.height);
+            Console.ReadKey();
+        }
     }
 }
