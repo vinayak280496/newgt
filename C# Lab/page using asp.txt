@@ -1,0 +1,56 @@
+C#.net page
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        object value = ViewState["HitCount"];
+        int i = (value == null) ? 1 : (int)value + 1;
+        Label1.Text = string.Format("You score is: {0}", i);
+        ViewState["HitCount"] = i;
+    }
+}
+
+
+
+ASP.net Page
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    </head>
+<body style="width: 625px; margin-left: 203px">
+            <form id="form1" runat="server">
+    <div class="container">
+        <h1>Welcome to the page!</h1>
+        <br />
+        <asp:Label ID="Label1" Text="You clicked button 0 times" runat="server" />
+        <br />
+        <br />
+        <asp:button id="clickMeButton" runat="server" text="Click me" 
+            onClick="Button1_Click" />
+        <div class="space"> <br /> <footer>
+            <br />
+            <br />
+            Vinayak Kolaki(CA172009)</footer></div>
+        
+    </div>
+    </form>
+
+    </body>
+</html>
