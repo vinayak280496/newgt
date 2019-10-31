@@ -58,4 +58,124 @@ namespace pgm1011
 
        
     }
+}using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace pgm1011
+{
+    public partial class Form1 : Form
+    {
+        string[] names;
+        string[] passs;
+        int rows;
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            names = new string[10];
+            passs = new string[10];
+
+            names[0] = "admin";
+            names[1] = "user";
+            names[2] = "tony";
+
+            passs[0] = "admin";
+            passs[1] = "user";
+            passs[2] = "stark";
+            rows = 3;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string username = textBox1.Text.Trim();
+            string password = textBox2.Text.Trim();
+
+            if (username.Equals("") || password.Equals(""))
+            {
+                MessageBox.Show("Fields cannot be empty!");
+                return;
+            }
+            for (int i = 0; i < rows; i++)
+            {
+                if (names[i].Equals(username) && passs[i].Equals(password))
+                {
+                    MessageBox.Show("Login Successfull!");
+                    return;
+                }
+            }
+            MessageBox.Show("Incorrect username/password!");
+
+
+        }
+
+       
+    }
+}using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace pgm1011
+{
+    public partial class Form1 : Form
+    {
+        string[] names;
+        string[] passs;
+        int rows;
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            names = new string[10];
+            passs = new string[10];
+
+            names[0] = "admin";
+            names[1] = "user";
+            names[2] = "tony";
+
+            passs[0] = "admin";
+            passs[1] = "user";
+            passs[2] = "stark";
+            rows = 3;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string username = textBox1.Text.Trim();
+            string password = textBox2.Text.Trim();
+
+            if (username.Equals("") || password.Equals(""))
+            {
+                MessageBox.Show("Fields cannot be empty!");
+                return;
+            }
+            for (int i = 0; i < rows; i++)
+            {
+                if (names[i].Equals(username) && passs[i].Equals(password))
+                {
+                    MessageBox.Show("Login Successfull!");
+                    return;
+                }
+            }
+            MessageBox.Show("Incorrect username/password!");
+
+
+        }
+
+       
+    }
 }
